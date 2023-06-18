@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using _2_azure_table.Models;
 using Azure.Data.Tables;
+=======
+>>>>>>> 87ecdf1 (commit inicial)
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -23,6 +26,7 @@ namespace _2_azure_table.Controllers
             _tableName = configuration.GetValue<string>("AzureTableName");
         }
 
+<<<<<<< HEAD
         private TableClient GetTableClient()
         {
             var serviceClient = new TableServiceClient(_connectionString);
@@ -120,5 +124,8 @@ namespace _2_azure_table.Controllers
             tableClient.DeleteEntity(id, id); // id = partition key or row key
             return NoContent();
         }
+=======
+        
+>>>>>>> 87ecdf1 (commit inicial)
     }
 }
