@@ -80,8 +80,7 @@ namespace _2_azure_table.Controllers
                 return Ok(contatos);
             }
 
-            return NotFound();
-            
+            return NotFound();            
         }
 
         [HttpGet("ObterPorEmail/{email}")]
@@ -96,8 +95,7 @@ namespace _2_azure_table.Controllers
                 return Ok(contatos);
             }
 
-            return NotFound();
-            
+            return NotFound();            
         }
 
         [HttpGet("ObterPorTelefone/{telefone}")]
@@ -112,8 +110,15 @@ namespace _2_azure_table.Controllers
                 return Ok(contatos);
             }
 
-            return NotFound();
-            
+            return NotFound();            
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(string id)
+        {
+            var tableClient = GetTableClient();
+            tableClient.DeleteEntity(id, id); // id = partition key or row key
+            return NoContent();
         }
     }
 }
