@@ -73,8 +73,47 @@ namespace _2_azure_table.Controllers
         {
             var tableClient = GetTableClient();
             var contatos = tableClient.Query<Contato>(x => x.Nome == nome).ToList();
+            var count = contatos.Count();
 
-            return Ok(contatos);
+            if (count > 0)
+            {
+                return Ok(contatos);
+            }
+
+            return NotFound();
+            
+        }
+
+        [HttpGet("ObterPorEmail/{email}")]
+        public IActionResult ObterPorEmail(string email)
+        {
+            var tableClient = GetTableClient();
+            var contatos = tableClient.Query<Contato>(x => x.Email == email).ToList();
+            var count = contatos.Count();
+
+            if (count > 0)
+            {
+                return Ok(contatos);
+            }
+
+            return NotFound();
+            
+        }
+
+        [HttpGet("ObterPorTelefone/{telefone}")]
+        public IActionResult ObterPorTelefone(string telefone)
+        {
+            var tableClient = GetTableClient();
+            var contatos = tableClient.Query<Contato>(x => x.Telefone == telefone).ToList();
+            var count = contatos.Count();
+
+            if (count > 0)
+            {
+                return Ok(contatos);
+            }
+
+            return NotFound();
+            
         }
     }
 }
