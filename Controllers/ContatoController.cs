@@ -58,5 +58,14 @@ namespace _2_azure_table.Controllers
             tableClient.UpsertEntity(contatoTable);
             return Ok();
         }
+
+        [HttpGet("ListarTodosOsContatos")]
+        public IActionResult ObterTodos()
+        {
+            var tableClient = GetTableClient();
+            var contatos = tableClient.Query<Contato>().ToList();
+
+            return Ok(contatos);
+        }
     }
 }
