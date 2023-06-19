@@ -10,9 +10,10 @@
 *.userosscache
 *.sln.docstates
 
-
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+
+/anotacoes.txt
 
 # Mono auto generated files
 mono_crash.*
@@ -476,17 +477,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-<<<<<<< HEAD
-<<<<<<< HEAD
-appsettings.Development.json
-<<<<<<< HEAD
-=======
->>>>>>> 87ecdf1 (commit inicial)
-=======
->>>>>>> f3dccc2 (commit)
-anotacoes.txt
-appsettings.Development.json
-=======
-appsettings.Development.json
-anotacoes.txt
->>>>>>> novo-branch
