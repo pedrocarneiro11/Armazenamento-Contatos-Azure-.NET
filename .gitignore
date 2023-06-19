@@ -477,6 +477,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 <<<<<<< HEAD
+<<<<<<< HEAD
 appsettings.Development.json
 <<<<<<< HEAD
 =======
@@ -485,3 +486,7 @@ appsettings.Development.json
 >>>>>>> f3dccc2 (commit)
 anotacoes.txt
 appsettings.Development.json
+=======
+appsettings.Development.json
+anotacoes.txt
+>>>>>>> novo-branch
